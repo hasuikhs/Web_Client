@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>test01</title>
+    <style>
+        table>tbody>tr>th {
+            /* 테이블은 tbody까지 고려 */
+            color: red;
+        }
+
+        table tr td {
+            /* >는 직계, 띄워쓰기는 포함된 모든 관계 테이블은 tbody까지 고려 */
+            color: blue;
+        }
+
+        table {
+            width: 50%;
+            border-collapse: collapse;
+        }
+
+        table,
+        tr,
+        td,
+        th {
+            /* >는 직계, 띄워쓰기는 포함된 모든 관계 테이블은 tbody까지 고려 */
+            border: 1px solid red;
+        }
+
+        tr:nth-child(2n) {
+            background-color: gray;
+        }
+
+
+        li {
+            color: white;
+            list-style: none;
+            display: inline;
+            /* 한줄로 */
+            padding: 0.5em;
+            /* 간격 */
+            float: left;
+        }
+
+        .menu1 li:nth-child(2n) {
+            /* 짝수번째 적용사항 */
+            background-color: red;
+        }
+
+        .menu1 li:nth-child(2n+1) {
+            /* 홀수번째 적용사항 */
+            background-color: blue;
+        }
+
+        .menu1 li:first-child {
+            border-radius: 10px 0 0 10px;
+        }
+
+        .menu1 li:last-child {
+            border-radius: 0 10px 10px 0;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>file download list</h1>
+    <ul>
+        <li><a href="./file/tomcat.zip">tomcat 1</a></li>
+        <li><a href="./file/tomcat.zip">tomcat 2</a></li>
+        <li><a href="./file/tomcat.zip">tomcat 3</a></li>
+    </ul>
+    <br>
+    <br>
+    <br>
+    <br>
+    <table>
+        <tr>
+            <th>이름</th>
+            <th>지역</th>
+        </tr>
+        <tr>
+            <td>윤인성</td>
+            <td>서울특별시 강서구 내발산동</td>
+        </tr>
+        <tr>
+            <td>윤인성</td>
+            <td>서울특별시 강서구 내발산동</td>
+        </tr>
+        <tr>
+            <td>윤인성</td>
+            <td>서울특별시 강서구 내발산동</td>
+        </tr>
+        <tr>
+            <td>윤인성</td>
+            <td>서울특별시 강서구 내발산동</td>
+        </tr>
+    </table>
+    <ul class="menu1">
+        <li>메뉴1</li>
+        <li>메뉴2</li>
+        <li>메뉴3</li>
+        <li>메뉴4</li>
+        <li>메뉴5</li>
+        <li>메뉴6</li>
+    </ul>
+    <br>
+    <br>
+    <ul>
+        <li>메뉴1</li>
+        <li>메뉴2</li>
+        <li>메뉴3</li>
+        <li>메뉴4</li>
+        <li>메뉴5</li>
+        <li>메뉴6</li>
+    </ul>
+    <br>
+    <br>
+    <ul class="menu1">
+        <li><a href="">메뉴1</a></li>
+        <li><a href="">메뉴2</a></li>
+        <li><a href="">메뉴3</a></li>
+        <li><a href="">메뉴4</a></li>
+        <li><a href="">메뉴5</a></li>
+        <li><a href="">메뉴6</a></li>
+        <li><a href="">메뉴7</a></li>
+        <li><a href="">메뉴8</a></li>
+        <li><a href="">메뉴9</a></li>
+    </ul>
+</body>
+
+</html>

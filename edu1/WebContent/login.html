@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>form 처리</title>
+</head>
+<body>
+	<h1>form 처리 get 방식</h1>
+	<form action="process.jsp" method="get">
+		<table border="1">
+			<tr>
+				<td><label for="id">email</label></td>
+				<td><input type="email" id="id" name="id" value="" /></td>
+			</tr>
+			<tr>
+				<td><label for="pw">pw</label></td>
+				<td><input type="password" id="pw" name="pw" value="" /></td>
+			</tr>
+			<tr>
+				<td colspan="2"><input type="submit" value="로그인"> <input
+					type="reset" value="취소"> <a href="member.html">회원가입</a></td>
+			</tr>
+
+		</table>
+	</form>
+	<!-- id와 pw가 노출 되지 않음 -->
+	<h1>form 처리 post 방식</h1>
+	<form action="process.jsp" method="post">
+		<table border="1">
+			<tr>
+				<td><label for="id">id</label></td>
+				<td><input type="text" name="id" required="required" /></td>
+			</tr>
+			<tr>
+				<td><label for="pw">pw</label></td>
+				<td><input type="password" name="pw" value="" /></td>
+			</tr>
+			<tr>
+				<td colspan="2"><input type="submit" value="로그인"> <input
+					type="reset" value="취소"> <a href="member.html">회원가입</a></td>
+			</tr>
+
+		</table>
+	</form>
+
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>test08</title>
+    <style>
+        #one {
+            background-color: cyan;
+            width: 200px;
+            height: 50px;
+        }
+
+        #two {
+            /* position:static; */
+            position: fixed;
+            left: 30px;
+            top: 30px;
+            /* absolute 화면상에 위치 설정 가능 */
+            /* fixed는 화면상에 고정 ex)광고, 페이지 리모컨 */
+            /* static 은 고정으로 left 같은 위치 설정 무시 */
+            background-color: yellow;
+            width: 200px;
+            height: 50px;
+        }
+
+        #three {
+            background-color: lightgreen;
+            width: 200px;
+            height: 50px
+        }
+    </style>
+</head>
+
+<body>
+    <p id="one">block #1</p>
+    <div id="two">
+        block#2<br />
+        position:static;<br />
+    </div>
+    <p id="three">block #3</p>
+</body>
+
+</html>

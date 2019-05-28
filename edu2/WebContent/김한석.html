@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>test01</title>
+<style>
+@import
+	url('https://fonts.googleapis.com/css?family=Pacifico&display=swap');
+</style>
+<style>
+header {
+	text-align: center;
+	background-color: orange;
+	height: 9.6em;
+}
+
+h4.h2 {
+	font-family: 'Pacifico', cursive;
+}
+div#hd{
+	background-color: green;
+	width: 100%;
+	height:3em;
+}
+
+li {
+	color: white;
+	list-style: none;
+	display: inline; /* 한줄로 */
+	padding: 0; /* 간격 */
+	text-align: center;
+}
+
+ul.ul1 li a {
+	width: 100px;
+	height: 30px;
+	color: yellow;
+	background-color: black;
+	margin: 10px auto;
+	display: inline-block;
+	border-radius: 10px 10px 0 0;
+	text-decoration: none;
+}
+
+.btn {
+	text-align: center;
+	display: block;
+	width: 100px;
+	height: 40px;
+	line-height: 40px;
+	border: 1px solid white;
+	border-radius: 15px;
+	box-shadow: 5px 5px 5px black;
+	margin: 10px auto;
+	text-decoration: none;
+	font-size: 100%;
+	font-weight: bold;
+	background-color: orange;
+}
+
+a.btn:hover {
+	color: blue;
+	text-shadow: 5px 5px 5px white;
+}
+footer {
+	background-color: black;
+	width:100%;
+	height: 4em;
+	clear:both;
+}
+div#left {
+	width: 25%;
+	height: 400px;
+	float: left;
+	background-color: gray;
+	display: table-cell;
+}
+
+div#center {
+	display: table-cell;
+	width: 50%;
+	float:left;
+}
+
+div#right {
+	width: 25%;
+	height:400px;
+	float: right;
+	background-color: gray;
+	display: table-cell;
+	text-align: center;
+}
+
+table tr:nth-child(2n+1) {
+	background-color: gray;
+}
+th{
+	background-color: black;
+	color: yellow;
+}
+table {
+	width: 60%;
+	border: 2px solid black;
+	border-collapse: collapse;
+	text-align: center;
+}
+img{
+	width:130px;
+	height:40px;
+	margin: 20px;
+}
+
+</style>
+</head>
+<body>
+	<header>
+		<h1>Html5 & CSS3.0</h1>
+		<h4 class="h2">JavaScript, jquery, Ajax</h4>
+		<ul class="ul1">
+			<li><a href="#">HTML5</a></li>
+			<li><a href="#">CSS</a></li>
+			<li><a href="#">JavaScript</a></li>
+			<li><a href="#">jQuery</a></li>
+			<li><a href="#">Ajax</a></li>
+		</ul>
+		
+	</header>
+	<div id="hd">	</div>
+	<div>
+	
+		<div id="left">
+			<a href="#" class="btn">기능 1</a><br>
+			<a class="btn" href="#">기능 2</a><br>
+			<a class="btn" href="#">기능 3</a>
+		</div>
+		
+		
+		
+		<div id="right">
+			<img src="pg.jpg"><br>
+			<img src="pg.jpg"><br>
+			<img src="pg.jpg"><br>
+			<img src="pg.jpg">
+		</div>
+		<div id="center" align="center">
+			<h2>Table CSS</h2>
+			<table>
+				<tr><th>ID</th><th>PWD</th><th>NAME</th></tr>
+				<tr><td>java01</td><td>1234</td><td>홍길동</td></tr>
+				<tr><td>java02</td><td>1234</td><td>고길동</td></tr>
+				<tr><td>java03</td><td>1234</td><td>박길동</td></tr>
+				<tr><td>java04</td><td>1234</td><td>김길동</td></tr>
+				<tr><td>java05</td><td>1234</td><td>최길동</td></tr>
+			</table>
+		</div>
+	</div>
+	<footer> 
+	</footer>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>js function call</title>
+<style>
+#result {
+	margin: 10px;
+	width: 300px;
+	height: 150px;
+	background-color: gray;
+	width: 300px;
+}
+</style>
+<script>
+	function hello() {
+		return "hello";
+	}
+	function world() {
+		return "world";
+	}
+	function msg() {
+		var a = hello();
+		var b = world();
+		document.getElementById('msg').value = a+" "+b;
+		document.getElementById('result').innerText = a+" "+b;
+		//console.log(a+b);
+	}
+
+</script>
+</head>
+<body>
+	<h2>js function</h2>
+	<button id="btn1" onclick="msg()">Button 1</button>
+	<input type="text" id="msg" disabled="disabled">
+	<div id="result"></div>
+</body>
+</html>
