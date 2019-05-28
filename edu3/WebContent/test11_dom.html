@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>dom tree</title>
+<script>
+	var div = document.getElementsByTagName('div')
+	div[0].childNodes[1].innerHTML='~~~' // 과일리스트 -> ~~~
+
+	document.getElementsByTagName('li')[1].innerText="수박"
+	
+	document.getElementsByTagName('p')[1].innerText="커피목록" // 커피리스트 -> 커피목록
+
+</script>
+</head>
+<body>
+	<div>
+		<p>과일리스트</p>
+		<ul>
+			<li>사과</li>
+			<li>바나나</li>
+			<li>체리</li>
+		</ul>
+	</div>
+	<div>
+		<p>커피리스트</p>
+		<ul>
+			<li>아메리카노</li>
+			<li>카푸치노</li>
+			<li>아이스아메리카노</li>
+			<li>라떼</li>
+		</ul>
+	</div>
+</body>
+</html>
