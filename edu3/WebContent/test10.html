@@ -2,18 +2,58 @@
 <html>
 <head>
 <meta charset="UTF-8">
- <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>guess num game</title>
 <script>
 
+	var snum = parseInt(Math.random()*100)
+	
+	
+	// 예외처리 function
+	function test(){
+		var result = document.getElementById('result')
+	
+		try{
+			var x = document.getElementById('num').value;
+			if(x =="") throw result.innerHTML="값을 입력하세요."
+			if(isNaN(x)) throw result.innerHTML="숫자를 입력하세요."
+			if(x>snum) throw result.innerHTML="더 작은 수를 입력하세요."
+			if(x<snum) throw result.innerHTML="더 큰 수를 입력하세요."
+			if(x==snum) throw result.innerHTML="성공입니다."
+		} catch(e){
+			result.innerHTML="<h1>"+e+"</h1>"
+		}
+	}
+	/*
+	function test1(){
+		var x = document.getElementById('num').value;
+		var result = document.getElementById('result')
+		if(x ==""){
+			result.innerHTML="값을 입력하세요."
+		}
+		if(isNaN(x)){
+			result.innerHTML="숫자를 입력하세요."
+		}
+		if(x>snum){
+			result.innerHTML="더 작은 수를 입력하세요."
+		}
+		if(x<snum){
+			result.innerHTML="더 큰 수를 입력하세요."
+		}
+		if(x==snum){
+			result.innerHTML="성공입니다."
+		}
+	}
+	*/
 </script>
 </head>
 <body>
 	<h1>guess num game</h1>
 	<p>내가 가진 숫자를 맞춰보세요.
-	<p>1~100 사이의 숫자를 입력해주세요.
-	<input type="text" id="num">
-	<button onclick="test()">숫자맞추기</button>
+	<p>
+		1~100 사이의 숫자를 입력해주세요. <input type="text" id="num">
+		<button onclick="test()">숫자맞추기</button>
+		<br>
 	<p id="result"></p>
 </body>
 </html>
