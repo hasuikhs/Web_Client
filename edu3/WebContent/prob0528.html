@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>test01</title>
+<script>
+/* data 가져오기 클릭하면 
+주소록 목록이 테이블 형태로 #result 창에 출력되게 
+getData() 함수 완성하기
+
+조건 
+ getdata() 함수에
+  주소록 데이터가 자바스크립트 객체의 배열형태로 있다고 가정한다. */
+	var data = [{"name":"홍길동","age" : 27,"address":"서울"},
+				{"name":"김길동","age" : 25,"address":"경기"},
+				{"name":"고길동","age" : 24,"address":"인천"},
+				{"name":"최길동","age" : 28,"address":"부산"}];
+	
+	var ad = JSON.stringify(data);
+	var obj = JSON.parse(ad);
+	
+	function getData(){
+		var result = document.getElementById('result');
+		var tag='';
+		tag+='<table border="1">';
+			for(let data of obj){
+				tag+='<tr>';
+				tag+='<td>'
+				tag+=data.name
+				tag+='</td>'
+				tag+='<td>'
+				tag+=data.age
+				tag+='</td>'
+				tag+='<td>'
+				tag+=data.address
+				tag+='</td>'
+				tag+='</tr>';
+			}
+			
+		tag+='</table>';
+
+		result.innerHTML = tag;
+	}
+</script>
+</head>
+<body>
+	<button onclick="getData()">Data 가져오기</button>
+	<div id="result"></div>
+</body>
+</html>
