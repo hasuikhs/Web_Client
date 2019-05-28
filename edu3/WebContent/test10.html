@@ -8,22 +8,22 @@
 
 	var snum = parseInt(Math.random()*100)
 	
-	
 	// 예외처리 function
 	function test(){
 		var result = document.getElementById('result')
 	
 		try{
 			var x = document.getElementById('num').value;
-			if(x =="") throw result.innerHTML="값을 입력하세요."
-			if(isNaN(x)) throw result.innerHTML="숫자를 입력하세요."
+			if(x =="") throw result.innerHTML="값을 입력하세요." 
+			if(isNaN(x)) throw result.innerHTML="숫자를 입력하세요."  
 			if(x>snum) throw result.innerHTML="더 작은 수를 입력하세요."
-			if(x<snum) throw result.innerHTML="더 큰 수를 입력하세요."
+			if(x<snum) throw result.innerHTML="더 큰 수를 입력하세요." 
 			if(x==snum) throw result.innerHTML="성공입니다."
 		} catch(e){
 			result.innerHTML="<h1>"+e+"</h1>"
 		}
 	}
+	
 	/*
 	function test1(){
 		var x = document.getElementById('num').value;
