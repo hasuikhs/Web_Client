@@ -16,9 +16,9 @@ getData() 함수 완성하기
 				{"name":"김길동","age" : 25,"address":"경기"},
 				{"name":"고길동","age" : 24,"address":"인천"},
 				{"name":"최길동","age" : 28,"address":"부산"}];
-	
-	var ad = JSON.stringify(data);
-	var obj = JSON.parse(ad);
+	//배열형태이지만 연습
+	var ad = JSON.stringify(data); // 배열을 스트링화
+	var obj = JSON.parse(ad); //스트링화된 배열을 재배열화
 	
 	function getData(){
 		var result = document.getElementById('result');
