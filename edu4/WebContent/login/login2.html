@@ -5,6 +5,10 @@
  <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>login</title>
 <script type="text/javascript">
+window.onload = function(){
+	var f1 = document.getElementById('form1');
+	f1.onsubmit = check;
+};
 	function check(){
 		var id = document.getElementById('id')
 		var pw = document.getElementById('pw')
@@ -26,7 +30,7 @@
 </head>
 <body>
 <h2>로그인 폼</h2>
-<form id="form1" name="form1" action="process.jsp" method="get" onsubmit="return check()">
+<form id="form1" name="form1" action="process.jsp" method="get">
 	<table border="1">
 		<tr>
 			<td>ID</td>
