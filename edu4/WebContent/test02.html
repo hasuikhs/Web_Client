@@ -14,6 +14,7 @@
 </style>
 <script>
 	function addtext(msg){
+<<<<<<< HEAD
 		if(document.createTextNode){
 			var node = document.createTextNode(msg);
 			document.getElementById('result').appendChild(node);
@@ -42,5 +43,17 @@
 	<br><br>
 	<button onclick="addTag('h1')">제목추가</button>
 	<button onclick="removeTag('h1')">제목삭제</button>
+=======
+		if(document.createNode){
+			var node = document.createTextNode(msg);
+			document.getElementById('result').appendChild(node);
+		}
+	}
+</script>
+</head>
+<body>
+	<h1>dom tree add remove</h1>
+	<div id="result" onclick="addtext('동적 텍스트 추가')">여기를 클릭하세요</div>
+>>>>>>> refs/remotes/origin/master
 </body>
 </html>
