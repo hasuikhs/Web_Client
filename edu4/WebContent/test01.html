@@ -4,13 +4,32 @@
 <meta charset="UTF-8">
  <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>query selector</title>
+<!-- 에러! 문서객체를 생성도 전에 스크립트 실행  
+<script>
+	document.querySelector('h1').style.backgroundColor='red';
+	document.querySelector('p').style.backgroundColor='blue'
+</script>
+-->
+<!-- 해결책 -->
+<!-- 스타일관련 자바스크립트 코드를 window.onload function 안으로 넣는다 -->
+<script>
+	window.onload = function(){
+		document.querySelector('h1').style.backgroundColor='red';
+		document.querySelector('p').style.backgroundColor='blue';
+	};
+	// 함수는 window.onload 안에 포함 시키지 않는다
+	function changeImg(){
+		document.querySelector('#img1').src = "./img/coffee2.gif";
+	}
+</script>
 </head>
 <body>
 	<h1>js query selector</h1>
 	<p>getElementById, getElementByTagname ~~~ old
 	<p>querySelector, querySelectorAll ~~~ new
 	<br/>
-	<img alt="coffee.gif" src="./img/coffee1.gif"/>
+	<img id="img1" alt="coffee1.gif" src="./img/coffee1.gif"/>
+	<button onclick="changeImg()">change image</button>
 	<br/><br/>
 
 	<h1>hello 1</h1>
@@ -20,5 +39,11 @@
 	<h1 class="hc">hello 5</h1>
 	<h1>hello 6</h1>
 
+	<p>document.querySelectorAll('.hc'),
+	document.querySelector('#h1')
+	document.querySelector('h1').style.backgroundColor='red'
+	document.querySelector('p').style.backgroundColor='blue'
+	
+	</p>
 </body>
 </html>
