@@ -1,0 +1,21 @@
+@charset "UTF-8";
+
+table {
+	margin: 0 auto; /* 가운데 정렬 */
+	border: 2px solid black; /* 굵기 선종류 색 */
+	border-collapse: collapse;
+}
+
+th {
+	background-color: black;
+	color: yellow;
+}
+
+.tablea tr:nth-child(2n){
+	background-color: gray;
+}
+.tablea tr:hover {
+	background-color: orange;
+	font-weight: bold;
+	font-size: 110%;
+}

@@ -1,0 +1,20 @@
+@charset "UTF-8";
+
+.btn {
+	text-align: center;
+	display: block;
+	width: 100px;
+	height: 40px;
+	line-height: 40px;
+	border:1px solid red;
+	border-radius: 15px;
+	box-shadow: 5px 5px 5px black;
+	margin: 0 auto;
+	text-decoration: none;
+	font-size: 100%;
+	font-weight: bold;
+}
+a.btn:hover {
+	color: blue;
+	text-shadow: 5px 5px 5px white;
+}
