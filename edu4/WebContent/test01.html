@@ -17,7 +17,7 @@
 		document.querySelector('h1').style.backgroundColor='red';
 		document.querySelector('p').style.backgroundColor='blue';
 	};
-	// 함수는 window.onload 안에 포함 시키지 않는다
+	// body테그 안에서 onclick이 지정되면, 함수는 window.onload 안에 포함 시키지 않는다. p402 
 	function changeImg(){
 		var cname = document.querySelector('#img1').src;
 		cname = cname.substring(cname.lastIndexOf('/'));
