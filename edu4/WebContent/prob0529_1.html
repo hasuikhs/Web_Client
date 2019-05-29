@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>test01</title>
+<style>
+	#a1{
+		 display:none ;
+	}
+	#a2{
+		 display:none ;
+	}
+	font{
+		font-size:large;
+		font-weight: bold;
+	}
+</style>
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script>
+window.onload=function(){
+	$(function() {
+		$('#q1').click(function() {
+			$('#a1').show();
+		})
+	});
+
+	$(function() {
+		$('#q2').click(function() {
+			$('#a2').show();
+		})
+	});
+}
+</script>
+
+</head>
+<body>
+	<h2>질문1 : 대한민국의 수도는 어디입니까?</h2>
+	<p id="q1">[정답 보기]</p>
+	<p id="a1">대한민국의 수도는 <font>서울</font>입니다.</p>
+	<br>
+	<h2>질문2 : 대한민국의 국보 1호는 무엇입니까?</h2>
+	<p id="q2">[정답 보기]</p>
+	<p id="a2">대한민국의 국보 1호는 <font>숭례문</font>입니다.</p>
+</body>
+</html>

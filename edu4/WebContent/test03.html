@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+<title>test01</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<!--  <script src= "./js/jquery-3.4.1.min.js"></script> -->
+<script>
+	/*
+	window.onload = function(){
+		$('h1').click(function(){
+			$(this).hide();
+		});
+		
+	};
+	*/
+	
+	/*
+	//jquery document가 준비가 되면
+	$(document).ready(function(){
+		$('#j3').click(function(){
+			$(this).hide();
+		})
+	});
+	*/
+	$(function(){
+		$('h2').click(function(){
+			$(this).hide();
+		})
+	});
+</script>
+</head>
+<body>
+	<h1>클릭하면 사라집니다.</h1>
+	
+	<h2>hello jQuery 1</h2>
+	<h2>hello jQuery 2</h2>
+	<h2 id='j3'>hello jQuery 3</h2>
+	<h2 class='jc'>hello jQuery 4</h2>
+	<h2 class='jc'>hello jQuery 5</h2>
+	<h2>hello jQuery 6</h2>
+</body>
+</html>
