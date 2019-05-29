@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+<title>dom tree add</title>
+<style>
+	#result{
+		width : 400px;
+		height : 200px;
+		overflow: scroll;
+		font: 16px bold;
+	}
+</style>
+<script>
+	function addtext(msg){
+		if(document.createTextNode){
+			var node = document.createTextNode(msg);
+			document.getElementById('result').appendChild(node);
+		}
+	}
+	function addTag(tag){
+		if(document.createElement(tag)){
+			var newtag = document.createElement(tag);
+			var textnode = document.createTextNode('제목');
+			newtag.appendChild(textnode);
+			document.getElementById('result').appendChild(newtag);
+		}
+	}
+	function removeTag(tag){
+		var i = document.getElementsByTagName(tag)[document.getElementsByTagName(tag).length-1];
+		if(i != undefined){
+			//document.getElementById('result').remove(i);
+			i.remove();
+		}
+	}
+</script>
+</head>
+<body>
+	<h1>dom tree add remove</h1>
+	<div id="result" onclick="addtext('동적 텍스트 추가')">여기를 클릭하세요</div>
+	<br><br>
+	<button onclick="addTag('h1')">제목추가</button>
+	<button onclick="removeTag('h1')">제목삭제</button>
+</body>
+</html>
