@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+<title>dom tree add</title>
+<style>
+	#result{
+		width : 400px;
+		height : 200px;
+		overflow: scroll;
+		font: 16px bold;
+	}
+</style>
+<script>
+	function addtext(msg){
+		if(document.createNode){
+			var node = document.createTextNode(msg);
+			document.getElementById('result').appendChild(node);
+		}
+	}
+</script>
+</head>
+<body>
+	<h1>dom tree add remove</h1>
+	<div id="result" onclick="addtext('동적 텍스트 추가')">여기를 클릭하세요</div>
+</body>
+</html>
