@@ -19,7 +19,14 @@
 	};
 	// 함수는 window.onload 안에 포함 시키지 않는다
 	function changeImg(){
-		document.querySelector('#img1').src = "./img/coffee2.gif";
+		var cname = document.querySelector('#img1').src;
+		cname = cname.substring(cname.lastIndexOf('/'));
+		if(cname == "/coffee2.gif"){
+			document.querySelector('#img1').src = "./img/coffee1.gif";
+		}
+		else{
+			document.querySelector('#img1').src = "./img/coffee2.gif";
+		}
 	}
 </script>
 </head>
