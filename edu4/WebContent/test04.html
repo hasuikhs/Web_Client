@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>jQuery</title>
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<style>
+span {
+	color: red;
+}
+</style>
+<script>
+	// $(function(){}); = window.onload = function(){};
+	$(function(){
+		$('input[name="id"]').keyup(function(){
+			// 해당 창에 키가 눌렷다 올라왔을때 발생 이벤트 keyup
+			var id = $(this).val(); 
+			// 자바스크립트 value,innerText,innerHTML : jquery val(),text(),html()
+			if(id.length < 5){
+				$('#sid').text('id 5글자 이상 입력')
+			}
+			else{
+				$('#sid').text('사용 가능')
+			}
+		});
+		
+		$('input[name="name"]').blur(function(){ 
+			// 들어갔다 나왔을 때, 값이 없어도 발생 이벤트 blur
+			var name = $(this).val(); 
+			if(name.length < 2){
+				$('#sname').text('이름은 2글자 이상 입력')
+			}
+			else{
+				$('#sname').text('사용 가능')
+			}
+		});
+		
+		$('input[type="button"]').click(function(){
+			$('#f1').attr('method','GET');
+			$('#f1').attr('action','process.jsp');
+			$('#f1').submit();
+		});
+	});
+</script>
+</head>
+<body>
+	<h1>Register</h1>
+	<form id="f1">
+		ID:<input type="text" name="id"><span id="sid"></span><br>
+		NAME:<input type="text" name="name"><span id="sname"></span><br>
+		<input type="button" value="Register">
+	</form>
+</body>
+</html>
