@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+<title>jQuery 페이지 생성</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script>
+$(function(){
+	for(var i=0;i<256;i++){
+		$('<div></div>').css({
+			height:2, background:"rgb("+i+","+i+","+i+")"
+		}).appendTo('body') // 테그를 jQuery 안에 넣으면 테그가 생성
+	}
+});
+</script>
+</head>
+<body>
+	
+</body>
+</html>

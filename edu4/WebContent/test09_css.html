@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+<title>jQuery CSS</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<style>
+	*{
+		margin:10px;
+	}
+	#result{
+		width:200px;
+		height:200px;
+		border:1px solid red;
+	}
+	.ui{
+		background-color: red;
+		color: white;
+	}
+</style>
+<script>
+$(function(){
+	$('#uio').click(function(){
+		$('#msg').addClass('ui');
+	});
+	$('#uix').click(function(){
+		$('#msg').removeClass('ui');
+	});
+	$('#btn1').click(function(){
+		$('#result').css('background-color','red');
+		$('#msg').text($('#result').css('background-color'));
+	});
+});
+</script>
+</head>
+<body>
+	<h2>jQuery CSS</h2>
+	<div id="result"></div>
+	<button id="btn1">css 1</button>
+	<button id="btn2">css 2</button>
+	<button id="btn3">css 3</button>
+	<br>
+	<select id="color">
+		<option>red</option>
+		<option>blue</option>
+		<option>green</option>
+		<option>gray</option>
+	</select>
+	<br>
+	<button id="uio">UI O</button>
+	<button id="uix">UI X</button>
+	<p id="msg">여기는 메세지 창입니다.</p>
+	</body>
+</html>

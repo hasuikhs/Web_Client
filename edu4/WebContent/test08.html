@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+<title>jQuery 문서 생성</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script>
+	$(function(){
+		$('<h1></h1>').text('Hello jQuery')
+					  .css({
+						  color:"white",
+						  backgroundColor:"red"
+					  })
+					  .appendTo('body');
+		$('<h3> jQuery </h3>').appendTo('body');
+		
+		$('<ul></ul>').appendTo('body');
+		$('<li><a href="#">link1</a></li>').appendTo('ul');
+		$('<li><a href="#">link2</a></li>').appendTo('ul');
+		$('<li><a href="#">link3</a></li>').appendTo('ul');
+		$('<li><a href="#">link4</a></li>').appendTo('ul');
+					  
+	});
+</script>
+</head>
+<body>
+	
+</body>
+</html>

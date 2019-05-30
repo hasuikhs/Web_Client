@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+<title>jQuery image</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script>
+/*
+	$(function(){
+		$('img').css({height:200, width:300}).each(function(index,item){
+			$(this).attr('src','./img/img'+ (index+1) +'.jpg');	
+		});
+	});
+	*/
+	// attr attribute 속성 추가
+	$(function(){
+		$('img').each(function(index,item){
+			$(this).attr('src','./img/img'+ (index+1) +'.jpg');
+			$(this).attr('width','150');
+			$(this).attr('height','100');
+		});
+	});
+</script>
+
+</head>
+<body>
+$('img:eq(0)').attr('src')
+$('img:eq(0)').attr('src','./img/coffee1.gif')
+
+	<img />
+	<img />
+	<img />
+	<img />
+	<img />
+</body>
+</html>

@@ -4,7 +4,6 @@
 <meta charset="UTF-8">
  <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>query selector</title>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <!-- 에러! 문서객체를 생성도 전에 스크립트 실행  
 <script>
 	document.querySelector('h1').style.backgroundColor='red';
@@ -18,11 +17,11 @@
 		document.querySelector('h1').style.backgroundColor='red';
 		document.querySelector('p').style.backgroundColor='blue';
 	};
-
+<<<<<<< HEAD
 	// body테그 안에서 onclick이 지정되면, 함수는 window.onload 안에 포함 시키지 않는다
-
+=======
 	// body테그 안에서 onclick이 지정되면, 함수는 window.onload 안에 포함 시키지 않는다. p402 
-
+>>>>>>> refs/remotes/origin/master
 	function changeImg(){
 		var cname = document.querySelector('#img1').src;
 		cname = cname.substring(cname.lastIndexOf('/'));
@@ -57,9 +56,5 @@
 	document.querySelector('p').style.backgroundColor='blue'
 	
 	</p>
-	
-	$('h1:eq(1)') <!-- h1태그의 1번 값 불러와 -->
-	$('h1:eq(1)').text('@@@')<!-- 불러온값 변경 -->
-	
 </body>
 </html>
