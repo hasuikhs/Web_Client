@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+<title>test01</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<style>
+	#msg{
+		width: 500px;
+		height: 300px;
+		overflow: scroll;
+	}
+</style>
+<script>
+	getXml();
+	var xdata;
+	
+	$(function(){
+		$('#btn').click(function(){
+			getXml();
+		});
+	});
+	function getXml(){
+		$.ajax({
+			url : 'xml.jsp',
+			success : function(data){
+				xdata=data;
+				displayXml(data);
+			},
+			error : function(e){
+				$('#msg').text("error : "+e);
+			}
+		});
+	}
+	function displayXml(data){
+		var result ="";
+		var users = $(data).find('user');
+		$(users).each(function(index,item){
+			var id = $(item).find('id').text();
+			var name = $(item).find('name').text();
+			result += "<h3>"+id+"/"+name+"</h3>"
+		});
+		$('#msg').html(result)
+	}
+</script>
+</head>
+<body>
+	<h2>jQuery ajax xml</h2>
+	<button id="btn">Get Data(xml)</button>
+	<div id="msg"></div>
+</body>
+</html>

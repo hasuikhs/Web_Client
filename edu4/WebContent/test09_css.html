@@ -28,9 +28,11 @@ $(function(){
 		$('#msg').removeClass('ui');
 	});
 	$('#btn1').click(function(){
-		$('#result').css('background-color','red');
+		//$('#result').css('background-color','red');
+		$('#result').css('background-color',$('#color').val());
 		$('#msg').text($('#result').css('background-color'));
 	});
+
 });
 </script>
 </head>

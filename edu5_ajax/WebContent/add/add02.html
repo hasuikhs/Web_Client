@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ajax 01</title>
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script>
+	$(function() {
+		$('#btn1').click(function() {
+			$('#msg').html('<h3>ajax 통신 ......</h3>');
+
+			$.ajax({
+				url : "json.jsp",
+				//type : "get",
+				type : "post",
+				dataType : "json",
+				/*
+				data : {
+					p1:$('#p1').val(),
+					p2:$('#p2').val()
+				},
+				*/
+				data : $('form').serializeArray(),
+				success : function(data){
+					$('#msg').html('success');
+					$('#result').val(data.result);
+				},
+				error : function(error, status){
+					$('#msg').html(error);
+				}
+			});
+		});
+	});
+</script>
+</head>
+<body>
+	<h1>jQuery ajax add</h1>
+	<form action="">
+		<input type="text" name="p1" id="p1"> + 
+		<input type="text" name="p2" id="p2"> =
+		<input type="text" name="result" id="result">
+	</form>
+	<button id="btn1">ajax 요청</button>
+	<br>
+	<div id="msg"></div>
+</body>
+</html>

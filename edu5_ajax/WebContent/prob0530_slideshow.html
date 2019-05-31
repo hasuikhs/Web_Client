@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>test01</title>
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+<script>
+$(function(){
+	var index = 1;
+	$('img').attr('src','./img/img1.jpg');
+	$('#left').click(function(){
+		index--;
+		if(index < 1){
+			index =4;
+		}
+		$('img').attr('src','./img/img'+ (index) +'.jpg');
+	});
+	$('#right').click(function(){
+		index++;
+		if(index >5){
+			index = 1;
+		}
+		$('img').attr('src','./img/img'+ (index) +'.jpg');
+	});
+   
+});
+
+</script>
+<style>
+*{
+	align-content: center;
+}
+#slide{
+	position:relative;
+	width: 500px;
+	height:500px;
+}
+#imgs{
+	width: 500px;
+	height:500px;
+}
+
+#left{
+	position : absolute;
+	top : 50%;
+}
+#right{
+	position : absolute;
+	top : 50%;
+	right : 0px;
+}
+</style>
+</head>
+<body>
+	<div id="slide">
+		
+			<img id="imgs">
+			<button id="left">◀</button>
+			<button id="right">▶</button>
+					
+	</div>
+</body>
+</html>
