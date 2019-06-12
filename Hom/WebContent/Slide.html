@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>test01</title>
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+<script>
+$(function(){
+	var index = 1;
+	$('img').attr('src','http://localhost:9090/Hom/img/img1.jpg');
+	$('#left').click(function(){
+		index--;
+		if(index < 1){
+			index =4;
+		}
+		$('img').attr('src','http://localhost:9090/Hom/img/img'+ (index) +'.jpg');
+	});
+	$('#right').click(function(){
+		index++;
+		if(index >5){
+			index = 1;
+		}
+		$('img').attr('src','http://localhost:9090/Hom/img/img'+ (index) +'.jpg');
+	});
+   
+});
+
+</script>
+<style>
+#slide{
+	vertical-align : middle;
+	position:relative;
+	width: 600px;
+	height: 300px;
+}
+#imgs{
+	width: 600px;
+	height:300px;
+}
+
+#left{
+	position : absolute;
+	top : 50%;
+}
+#right{
+	position : absolute;
+	top : 50%;
+	right : 0px;
+}
+</style>
+</head>
+<body>
+	<div id="slide">
+		
+			<img id="imgs">
+			<button id="left">◀</button>
+			<button id="right">▶</button>
+					
+	</div>
+</body>
+</html>

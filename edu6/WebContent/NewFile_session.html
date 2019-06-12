@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+<title>test01</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script type="text/javascript">
+$(function(){
+	if( !sessionStorage.pageLoadCount){
+		sessionStorage.pageLoadCount = 0;
+	}
+	sessionStorage.pageLoadCount = parseInt(sessionStorage.pageLoadCount) + 1;
+	document.getElementById('count').textContent = sessionStorage.pageLoadCount;
+});
+</script>
+</head>
+<body>
+	<p>
+		페이지 방문 횟수 : <span id="count"></span>번
+	</p>
+	
+</body>
+</html>

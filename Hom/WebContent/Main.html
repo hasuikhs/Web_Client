@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>HTML5 & CSS3</title>
+<style>
+	@import url('https://fonts.googleapis.com/css?family=Do+Hyeon&display=swap');
+	body{
+		margin:0px;
+	}
+	header {
+		background-color: orange;
+		text-align: center;
+	}
+	header h1{
+		margin:0px;
+	}
+	nav {
+		background-color: orange;
+		 height: 40px; 
+		font-family: 'Do Hyeon', sans-serif;
+	}
+	nav ul{		
+		list-style: none;
+		text-align: center;
+	}
+	nav ul li{
+		display: inline-block;
+		background-color: black;
+		width: 100px;
+	    height: 30px;
+	    padding: 5px;
+	    border-radius: 10px 10px 0 0;
+	}
+	nav ul li a{
+		color:white;
+		text-decoration: none;
+		font-size: 20px;
+	}
+	nav a:hover {
+		text-decoration: underline;
+	}
+	section {
+		width:70%;
+		display:table-cell;
+		text-align: center;
+	}
+	aside {
+		width: 15%;
+		display:table-cell;
+		background-color: gray;
+		    height: 500px;
+	}
+	footer {
+		clear : both;
+		text-align: center;
+		background-color: black;
+		height: 60px;
+	}
+	article {
+		margin:10px;
+	}
+	
+	ul {
+		list-style: none;
+	}
+
+	.content {
+		display:table;
+		width:100%;
+	}
+	.blank {
+		height: 30px;
+		background-color: #00bcd4;
+	}
+	iframe{
+		border: none;
+	}	
+</style>
+</head>
+<body>
+	<div>
+		<header>
+			<hgroup>
+				<h1>190603</h1>
+				<h4>Html Script css</h4>
+			</hgroup>
+			<nav>
+				<ul>
+					<li><a href="http://localhost:9090/Hom/Slide.html" target="iframe">갤러리</a></li>
+					<li><a href="http://localhost:9090/Hom/Cal.html" target="iframe">계산기</a></li>
+					<li><a href="http://localhost:9090/Hom/Login.html" target="iframe">로그인</a></li>
+					<li><a href="http://localhost:9090/Hom/Chart.html" target="iframe">차트보기</a></li>
+					<li><a href="http://localhost:9090/Hom/Map.html" target="iframe">지도보기</a></li>
+				</ul>
+			</nav>
+		</header>
+		<div class="blank"></div>
+		<div class="content">
+			<aside>			
+				
+				
+			</aside>
+			<section>
+				<article>
+				<br>
+						<iframe name = "iframe" width="640" height="420"></iframe>
+					</article>			
+			</section>
+			<aside>			
+				
+				
+			</aside>
+			
+		</div>
+				
+		<footer> Footer content </footer>
+	</div>
+</body>
+</html>

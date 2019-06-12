@@ -36,7 +36,7 @@
 	}
 	function displayXml(data){
 		var result ="";
-		var cities = $(data).find('data');
+		var cities = $(data).find('location');
 		$(cities).each(function(index,item){
 			var id = $(item).find('mode').text();
 			var name = $(item).find('tmn').text();

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+<title>test01</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script>
+	var w;
+	function wstart(){
+		if(typeof(Worker) !== undefined){
+			//if(typeof(w) == undefined){
+				w = new Worker("./js/worker.js");
+			//}
+			w.onmessage = function(event){
+				document.getElementById('result').innerText=event.data;
+			};
+		} else{
+			doucment.getElementById('result').innerText=
+				"브라우저가 지원 하지 않는 기능";
+		}
+		
+	}
+	function wstop(){
+		w.terminate();
+	}
+</script>
+</head>
+<body>
+	<h2> Worker </h2>
+	<p> count number
+	<div id="result"></div>
+	<button onclick="wstart()">start worker</button>
+	<button onclick="wstop()">stop worker</button>
+	
+</body>
+</html>

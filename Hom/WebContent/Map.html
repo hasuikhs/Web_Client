@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Map</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<style>
+	#map{
+	width: 520;
+	height: 390;
+	background-color: gray;
+	}
+</style>
+
+</head>
+<body>
+	<h2>현재 위치 지도</h2>
+	<div id="map"></div>
+	
+	<script>
+	
+	navigator.geolocation.getCurrentPosition(initmap);
+	
+	function initmap(location){
+
+		var cen = {
+				lat : location.coords.latitude, // 위도
+				lng : location.coords.longitude // 경도
+		};
+		
+		var map = new google.maps.Map(document.getElementById('map'),{
+			zoom : 14,
+			center : cen
+		});
+		
+		var marker = new google.maps.Marker({
+			position : cen,
+			map : map
+		});
+	}
+	</script>
+	 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDQqJFfsDDyF9_1xtPrQAisVbGpnGuKH00&callback=initMap"
+    async defer></script>
+</body>
+</html>
