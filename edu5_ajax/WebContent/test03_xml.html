@@ -23,12 +23,12 @@
 	});
 	function getXml(){
 		$.ajax({
-			url : 'xml.jsp',
-			success : function(data){
+			url : 'xml.jsp', // 경로상 xml.jsp 파일 호출
+			success : function(data){ // 성공시
 				xdata=data;
 				displayXml(data);
 			},
-			error : function(e){
+			error : function(e){ // 
 				$('#msg').text("error : "+e);
 			}
 		});
